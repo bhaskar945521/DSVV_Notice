@@ -1,4 +1,4 @@
-const AIProvider = require('./AIProvider')
+const AIProvider = require('../AIProvider')
 
 class DemoAIProvider extends AIProvider {
   async analyzeNotice(title = '', text = '') {

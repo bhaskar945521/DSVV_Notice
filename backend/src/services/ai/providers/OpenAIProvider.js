@@ -1,4 +1,4 @@
-const AIProvider = require('./AIProvider')
+const AIProvider = require('../AIProvider')
 const DemoAIProvider = require('./DemoAIProvider')
 
 class OpenAIProvider extends AIProvider {
