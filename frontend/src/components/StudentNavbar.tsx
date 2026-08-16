@@ -24,11 +24,8 @@ export default function StudentNavbar() {
           <div className="flex items-center gap-6">
             <Link to="/student/dashboard" className="flex items-center gap-3 group">
               {/* Circular Logo */}
-              <div className="relative">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 blur-md opacity-50 scale-110" />
-                <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-blue-400/50 ring-2 ring-blue-500/20 shadow-md shadow-blue-500/20">
-                  <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
-                </div>
+              <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-blue-400/50 ring-2 ring-slate-700 shadow-md">
+                <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
               </div>
               <div>
                 <div className="font-black text-white text-sm leading-none tracking-tight">DSVV Updates</div>

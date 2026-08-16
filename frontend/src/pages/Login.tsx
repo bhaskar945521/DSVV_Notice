@@ -110,11 +110,8 @@ export default function Login() {
       <header className="relative z-10 max-w-6xl mx-auto w-full flex items-center justify-between px-6 pt-6 pb-2">
         <div className="flex items-center gap-4">
           {/* Circular Logo */}
-          <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 blur-md opacity-60 scale-110" />
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-400/60 shadow-lg shadow-blue-500/30 ring-2 ring-blue-500/20">
-              <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
-            </div>
+          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-400/50 ring-2 ring-blue-500/20 shadow-lg">
+            <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
           </div>
           <div>
             <h1 className="font-black text-white text-lg leading-none tracking-tight">DSVV Updates</h1>
@@ -207,11 +204,8 @@ export default function Login() {
               <div className="relative bg-slate-900/90 backdrop-blur-xl border border-slate-700/60 rounded-3xl p-7 shadow-2xl">
                 {/* Logo in form */}
                 <div className="flex justify-center mb-6">
-                  <div className="relative">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 blur-lg opacity-50 scale-125" />
-                    <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-blue-400/50 ring-4 ring-blue-500/15 shadow-xl shadow-blue-500/20">
-                      <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
-                    </div>
+                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-blue-400/40 ring-4 ring-slate-700/80 shadow-lg">
+                    <img src="/dsvv.webp" alt="DSVV Logo" className="w-full h-full object-cover" />
                   </div>
                 </div>
 
