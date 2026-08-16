@@ -93,18 +93,7 @@ export default function Login() {
   ]
 
   return (
-    <div className="min-h-screen bg-[#050b18] flex flex-col relative overflow-hidden">
-      {/* Animated gradient orbs */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-blue-600/10 blur-[120px] animate-pulse" />
-        <div className="absolute top-1/2 -right-32 w-[500px] h-[500px] rounded-full bg-indigo-600/10 blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute -bottom-40 left-1/3 w-[400px] h-[400px] rounded-full bg-cyan-500/8 blur-[90px] animate-pulse" style={{ animationDelay: '2s' }} />
-        {/* Grid lines */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(rgba(99,179,237,1) 1px, transparent 1px), linear-gradient(90deg, rgba(99,179,237,1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
-        }} />
-      </div>
+    <div className="min-h-screen bg-[#050b18] flex flex-col">
 
       {/* Top Header */}
       <header className="relative z-10 max-w-6xl mx-auto w-full flex items-center justify-between px-6 pt-6 pb-2">
@@ -197,11 +186,8 @@ export default function Login() {
 
           {/* Right Login Card */}
           <div className="lg:col-span-5">
-            <div className="relative">
-              {/* Card glow */}
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-blue-500/20 via-indigo-500/10 to-purple-500/20 blur-xl" />
-
-              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-slate-700/60 rounded-3xl p-7 shadow-2xl">
+            <div>
+              <div className="bg-slate-800/80 border border-slate-700/60 rounded-3xl p-7 shadow-xl">
                 {/* Logo in form */}
                 <div className="flex justify-center mb-6">
                   <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-blue-400/40 ring-4 ring-slate-700/80 shadow-lg">
