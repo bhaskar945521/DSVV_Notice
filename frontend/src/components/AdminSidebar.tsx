@@ -7,8 +7,8 @@ export default function AdminSidebar() {
   const location = useLocation()
 
   const items = [
-    { path: '/admin', label: 'Dashboard', icon: <IconDashboard size={18} /> },
-    { path: '/admin/notices/create', label: 'Create Notice', icon: <IconPlus size={18} /> },
+    { path: '/admin/dashboard', label: 'Dashboard', icon: <IconDashboard size={18} /> },
+    { path: '/admin/create', label: 'Create Notice', icon: <IconPlus size={18} /> },
     { path: '/admin/notices', label: 'My Department Notices', icon: <IconNotice size={18} /> },
     { path: '/admin/analytics', label: 'Engagement Analytics', icon: <IconCpu size={18} /> },
   ]

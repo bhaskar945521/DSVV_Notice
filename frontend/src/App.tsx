@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import { NotificationProvider } from './context/NotificationContext'
-import ProtectedRoute from './routes/ProtectedRoute'
 import RoleRoute from './routes/RoleRoute'
 
 // Auth Pages
@@ -39,13 +38,14 @@ function App() {
         <Router>
           <Routes>
             <Route path="/login" element={<Login />} />
-            
             <Route path="/" element={<Navigate to="/login" replace />} />
 
             {/* Student Routes */}
             <Route element={<RoleRoute allowedRoles={['student']} />}>
+              <Route path="/student" element={<StudentDashboard />} />
               <Route path="/student/dashboard" element={<StudentDashboard />} />
               <Route path="/student/dept" element={<StudentDeptFeed />} />
+              <Route path="/student/feed" element={<StudentDeptFeed />} />
               <Route path="/student/central" element={<StudentCentralFeed />} />
               <Route path="/student/notifications" element={<StudentNotifications />} />
               <Route path="/student/search" element={<StudentSearch />} />
@@ -54,15 +54,18 @@ function App() {
             </Route>
 
             {/* Dept Admin Routes */}
-            <Route element={<RoleRoute allowedRoles={['dept_admin']} />}>
+            <Route element={<RoleRoute allowedRoles={['dept_admin', 'super_admin']} />}>
+              <Route path="/admin" element={<AdminDashboard />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route path="/admin/create" element={<AdminCreateNotice />} />
+              <Route path="/admin/notices/create" element={<AdminCreateNotice />} />
               <Route path="/admin/notices" element={<AdminMyNotices />} />
               <Route path="/admin/analytics" element={<AdminAnalytics />} />
             </Route>
 
             {/* Super Admin Routes */}
             <Route element={<RoleRoute allowedRoles={['super_admin']} />}>
+              <Route path="/superadmin" element={<SuperAdminDashboard />} />
               <Route path="/superadmin/dashboard" element={<SuperAdminDashboard />} />
               <Route path="/superadmin/approvals" element={<SuperAdminApprovals />} />
               <Route path="/superadmin/notices" element={<SuperAdminAllNotices />} />
@@ -71,6 +74,18 @@ function App() {
               <Route path="/superadmin/users" element={<SuperAdminUsers />} />
               <Route path="/superadmin/analytics" element={<SuperAdminAnalytics />} />
               <Route path="/superadmin/audit" element={<SuperAdminAudit />} />
+
+              {/* Hyphenated aliases for Super Admin */}
+              <Route path="/super-admin" element={<SuperAdminDashboard />} />
+              <Route path="/super-admin/dashboard" element={<SuperAdminDashboard />} />
+              <Route path="/super-admin/approvals" element={<SuperAdminApprovals />} />
+              <Route path="/super-admin/notices" element={<SuperAdminAllNotices />} />
+              <Route path="/super-admin/collector" element={<SuperAdminCollector />} />
+              <Route path="/super-admin/sources" element={<SuperAdminCollector />} />
+              <Route path="/super-admin/departments" element={<SuperAdminDepartments />} />
+              <Route path="/super-admin/users" element={<SuperAdminUsers />} />
+              <Route path="/super-admin/analytics" element={<SuperAdminAnalytics />} />
+              <Route path="/super-admin/audit" element={<SuperAdminAudit />} />
             </Route>
 
             <Route path="*" element={<Navigate to="/login" replace />} />
